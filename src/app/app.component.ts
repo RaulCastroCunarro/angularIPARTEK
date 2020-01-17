@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular App';
   login = 'login';
+  carritoCompra = new Map();
 
   productos = [
     {
@@ -77,5 +78,10 @@ export class AppComponent {
   seleccionarProducto = function(producto){
     console.log('hemos hecho click');
     this.pSeleccionado = producto;
+  }
+
+  comprar = function(producto){
+    console.log('Hemos Comprado ' + producto.nombre);
+    this.carritoCompra.set(producto);
   }
 }

@@ -39,6 +39,8 @@
 <h1>{{title | uppercase}}</h1>
 
 <app-boton></app-boton>
+<button *ngIf="carritoCompra.size > 0" class="btn btn-warning"><i class="fas fa-shopping-cart"></i></button>
+
 
 <!-- Begin Page Content -->
 <div class="row justify-content-center h-75">
@@ -67,6 +69,7 @@
           <div class="col-6">{{h.fecha}}</div>
           <div class="col-6">{{h.precio|currency:'EUR':true}}</div>
         </div>
+        <button class="btn btn-primary" (click)="comprar(pSeleccionado)"><i class="fas fa-cart-arrow-down"></i></button>
       </div>
     </div>
   </div>

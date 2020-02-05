@@ -1,0 +1,19 @@
+<h1>SuperClicks</h1>
+
+<div>
+    <div>
+        <label>tu nombre:</label>
+        <input type="text" [(ngModel)]="jugador">
+        <button (click)="mostrarClicker()">Jugar</button>
+        <div [hidden]="!visible">
+            <label>{{puntos}}</label>
+            <button (click)="contarPuntos()">¡DALE!</button>
+        </div>
+    </div>
+    <div>
+        <h2>Ranking</h2>
+        <ul>
+            <li *ngFor="let j of ranking | keyvalue"><b>{{j.key}}</b> {{j.value}}</li>
+        </ul>
+    </div>
+</div>

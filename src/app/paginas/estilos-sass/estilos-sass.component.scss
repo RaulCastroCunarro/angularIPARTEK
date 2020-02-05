@@ -1,0 +1,50 @@
+// soporta comentarios de linea, que desaparecen en el .css
+//Variables
+$color_pink: #da9393;
+$color_green: #00FF00;
+$color_black: #000;
+
+h1 {
+    color: $color_pink;
+}
+
+.main {
+    padding: 40px;
+}
+
+//Nesting
+
+p {
+    code {
+        color: color_green;
+        background-color:color_green;
+        padding: 2px 8px;
+    }
+}
+
+// mixin
+@mixin redondear ($radio, $color){
+    border-radius: $radio;
+    border: 1px solid $color;
+    padding: 10px;
+}
+
+%boton{
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    color: black;
+    &:hover{
+        background-color: yellow;
+    }
+}
+
+.boton-verde{
+    @extend %boton;
+    color: green;
+}
+
+.boton-rojo{
+    @extend %boton;
+    color: red;
+}

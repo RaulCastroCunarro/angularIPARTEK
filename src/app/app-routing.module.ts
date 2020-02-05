@@ -7,6 +7,8 @@ import { InicioComponent } from './paginas/inicio/inicio.component';
 import { ArraysComponent } from './paginas/arrays/arrays.component';
 import { PokemonRestComponent } from './paginas/pokemon-rest/pokemon-rest.component';
 import { EstilosSASSComponent } from './paginas/estilos-sass/estilos-sass.component';
+import { DirectivasComponent } from './paginas/directivas/directivas.component';
+import { FiltrosComponent } from './paginas/filtros/filtros.component';
 
 /**
  * Definir las rutas la app de angular
@@ -19,8 +21,8 @@ const routes: Routes = [
   { path: 'pokemon', component: PokemonRestComponent },
   { path: 'arrays', component: ArraysComponent},
   { path: 'estilos', component: EstilosSASSComponent},
-  { path: 'directivas', component: ArraysComponent},
-  { path: 'filtros', component: ArraysComponent}
+  { path: 'directivas', component: DirectivasComponent},
+  { path: 'filtros', component: FiltrosComponent}
 ];
 
 @NgModule({

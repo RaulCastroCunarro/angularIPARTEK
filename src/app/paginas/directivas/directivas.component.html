@@ -1,1 +1,27 @@
-<p>directivas works!</p>
+<h2>Directivas</h2>
+<p>Hay tres tipo de directivas en Angualr:</p>
+
+<dl>
+    <dt>Componentes:</dt>
+    <dd>son directivas con una plantilla de html.</dd>
+    <dt>Estructurales:</dt>
+    <dd>cambian el DOM añdiendo o removiendo elementos, por jemplo *ngIf.</dd>
+    <dt>Attribute directive:</dt>
+    <dd>cambian la apariencia de un elemento del DOM, por ejemplo NgStyle.</dd>
+</dl>
+
+<p>Podemos crear nuestras propias directivas usando <code>ng g d $nombre_de_nuestra_directiva</code></p>
+<p appHello="yellow">En esta etiqueta estamos usando nuestra directiva <code>appHello</code>, mirar la consola para ver las
+    trazas.</p>
+<p appSubrayar = "red">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis aspernatur suscipit accusantium tempore temporibus labore consequatur, soluta nesciunt expedita corrupti modi, id esse doloremque explicabo cupiditate nobis incidunt eum aliquid.Reiciendis iste sunt non delectus, suscipit architecto illum sequi commodi molestiae et dolores facere voluptatibus in sit eos ullam alias quisquam quo beatae velit modi? Culpa asperiores et aliquid suscipit?</p>
+<p [appSubrayar] = "'green'">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis aspernatur suscipit accusantium tempore temporibus labore consequatur, soluta nesciunt expedita corrupti modi, id esse doloremque explicabo cupiditate nobis incidunt eum aliquid.Reiciendis iste sunt non delectus, suscipit architecto illum sequi commodi molestiae et dolores facere voluptatibus in sit eos ullam alias quisquam quo beatae velit modi? Culpa asperiores et aliquid suscipit?</p>
+<p [appSubrayar] = "colorSeleccionado">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis aspernatur suscipit accusantium tempore temporibus labore consequatur, soluta nesciunt expedita corrupti modi, id esse doloremque explicabo cupiditate nobis incidunt eum aliquid.Reiciendis iste sunt non delectus, suscipit architecto illum sequi commodi molestiae et dolores facere voluptatibus in sit eos ullam alias quisquam quo beatae velit modi? Culpa asperiores et aliquid suscipit?</p>
+
+<form>
+    <input type="radio" (click)="colorSeleccionado = 'pink'" name="color" value="pink"> Rosa<br>
+    <input type="radio" (click)="colorSeleccionado = 'orange'" name="color" value="orange"> Naranja<br>
+    <input type="radio" (click)="colorSeleccionado = 'teal'" name="color" value="teal"> Aguamarina<br>
+    <input type="radio" (click)="colorSeleccionado = 'blue'" name="color" value="blue"> Azul<br>
+
+    <input type="color" [(ngModel)]="colorSeleccionado">
+</form>

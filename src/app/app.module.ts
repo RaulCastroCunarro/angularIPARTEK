@@ -19,7 +19,6 @@ import { FiltrosComponent } from './paginas/filtros/filtros.component';
 import { HelloDirective } from './directives/hello.directive';
 import { SubrayarDirective } from './directives/subrayar.directive';
 import { AnimalesPipe } from './pipes/animales.pipe';
-import { AnimalesTipoPipe } from './pipes/animales-tipo.pipe';
 
 @NgModule({
   declarations: [
@@ -37,8 +36,7 @@ import { AnimalesTipoPipe } from './pipes/animales-tipo.pipe';
     FiltrosComponent,
     HelloDirective,
     SubrayarDirective,
-    AnimalesPipe,
-    AnimalesTipoPipe
+    AnimalesPipe
   ],
   imports: [
     BrowserModule,

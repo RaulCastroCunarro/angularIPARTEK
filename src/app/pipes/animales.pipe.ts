@@ -5,22 +5,51 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class AnimalesPipe implements PipeTransform {
 
-  transform(datos: any, busqueda: string): any {
-    console.trace('----------PIPE EMPIEZA--------');
-    console.trace(datos);
-    console.trace(busqueda);
+  /**
+   * filtro personalizado para animales
+   * @param datos Array<any> con animales
+   * @param busqueda palabra a buscar dentro del atributo Nombre
+   * @param tipo para filtar por atributo Tipo
+   * @see app/animales.ts json con los datos de los animales
+   */
+  transform(datos: any, busqueda: string, tipo: string): any {
 
-    busqueda = busqueda.toUpperCase();
+    console.debug(datos);
+    console.debug(tipo);
+    console.debug(busqueda);
 
-    let resultado = datos.filter((el) => {
-              console.trace(el);
-              const nombre = el.Nombre.toUpperCase();
-              el.Nombre.contans(busqueda);
-              return nombre.includes(busqueda);
-    });
+    if ( busqueda && '' !== busqueda.trim() ) {
 
-    console.trace('----------PIPE TERMINA--------');
-    return resultado;
-  }//transform
+      // filtrar por nombre
+      busqueda = busqueda.toUpperCase();
 
-}//AnimalesPipe
+      const resultado = datos.filter( (el) => {
+        console.debug(el);
+        const nombre = el.Nombre.toUpperCase();
+        return nombre.includes(busqueda);
+      });
+
+      // filtrar por tipo
+      if ( tipo && tipo !== 'TODOS' ) { 
+
+        return resultado.filter( (el) => el.Tipo === tipo);
+
+      } else {
+        return resultado;
+      }
+      
+
+    } else {
+
+      if ( tipo && tipo !== 'TODOS' ) {
+        return datos.filter( (el) => el.Tipo === tipo);
+      }else{
+        return datos;
+      }  
+
+      
+    }
+
+  }// transform
+
+}// AnimalesPipe

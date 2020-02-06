@@ -9,6 +9,7 @@ import { PokemonRestComponent } from './paginas/pokemon-rest/pokemon-rest.compon
 import { EstilosSASSComponent } from './paginas/estilos-sass/estilos-sass.component';
 import { DirectivasComponent } from './paginas/directivas/directivas.component';
 import { FiltrosComponent } from './paginas/filtros/filtros.component';
+import { RecetarioComponent } from './paginas/recetario/recetario.component';
 
 /**
  * Definir las rutas la app de angular
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'arrays', component: ArraysComponent},
   { path: 'estilos', component: EstilosSASSComponent},
   { path: 'directivas', component: DirectivasComponent},
-  { path: 'filtros', component: FiltrosComponent}
+  { path: 'filtros', component: FiltrosComponent},
+  { path: 'recetario', component: RecetarioComponent}
 ];
 
 @NgModule({

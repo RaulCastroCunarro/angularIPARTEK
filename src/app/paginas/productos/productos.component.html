@@ -1,8 +1,5 @@
 <h1>Productos</h1>
 
-{{ productos | json }}
-
-
 <app-boton></app-boton>
 
 <div class="row">
@@ -20,9 +17,5 @@
     <div class="col">
             <span *ngIf="!pSeleccionado.glutten" class="badge badge-pill badge-success">Sin Gluten</span>
             <span *ngIf="pSeleccionado.glutten" class="badge badge-pill badge-danger">Con Gluten</span>
-
-        {{ pSeleccionado | json }}
-
-
     </div>
 </div>

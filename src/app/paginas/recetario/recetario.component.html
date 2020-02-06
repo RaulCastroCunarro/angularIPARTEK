@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <a class="col-6">Cocinar Nueva Receta</a>
+        <div class="d-inline col-6">
+            <label for="gluten">Recetas Sin Gluten</label><input type="checkbox" id="gluten" value="gluten">
+            <input type="text" id="busqueda" class="d-block">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <h2>Recetario</h2>
+            <div class="card">
+                <ul class="list-group list-group-flush">
+                    <li *ngFor="let receta of recetas" (click)="selecionarReceta(receta)"
+                        class="position-relative list-group-item {{ (receta==rSeleccionado) ? 'active' : ''  }}">
+                        <p class="m-0 listname">{{receta.nombre}}</p>
+                        <p class="m-0 text-muted">{{receta.cocinero}}</p>
+                        <i *ngIf="!receta.isGlutenFree"
+                            class="fas fa-exclamation-triangle text-danger position-absolute gluten"></i>
+                        <i *ngIf="receta.isGlutenFree"
+                            class="fas fa-exclamation-triangle text-success position-absolute gluten"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="card">
+                <div class="card-body position-relative">
+                    <h5 class="card-title text-white bg-primary p-3">{{rSeleccionado.nombre}}</h5>
+                    <div class="d-flex justify-content-between">
+                        <img class="foto d-inline" src={{rSeleccionado.foto}} alt="Card image cap">
+                        <i *ngIf="!rSeleccionado.isGlutenFree"
+                            class="fas fa-exclamation-triangle text-danger position-absolute glutenimg"></i>
+                        <i *ngIf="rSeleccionado.isGlutenFree"
+                            class="fas fa-exclamation-triangle text-success position-absolute glutenimg"></i>
+                        <div class="d-inline-block col-8">
+                            <h6 class="card-subtitle mb-2 text-muted">Ingredientes</h6>
+                            <div class="card">
+                                <ul class="list-group list-group-flush">
+                                    <li *ngFor="let ingrediente of rSeleccionado.ingredientes" class="list-group-item">
+                                        {{ingrediente}}</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="p-1 m-1 mt-2">
+                        <p class="d-flex justify-content-around"><span class="text-danger">
+                                <i class="fas fa-heart"></i>{{rSeleccionado.likes}}</span>
+                            <span> By {{rSeleccionado.cocinero}}</span></p>
+                    </div>
+                    <p class="card-text">{{rSeleccionado.descripcion}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

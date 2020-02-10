@@ -2,8 +2,9 @@
     <div class="row">
         <a class="col-6">Cocinar Nueva Receta</a>
         <div class="d-inline col-6">
-            <label for="gluten">Recetas Sin Gluten</label><input type="checkbox" id="gluten" value="gluten">
-            <input type="text" id="busqueda" class="d-block">
+            <label for="gluten">Recetas Sin Gluten</label><input id="gluten" type="checkbox" 
+                    [(ngModel)]="checkGluten" value="gluten">
+            <input type="text" [(ngModel)]="busqueda" class="d-block">
         </div>
     </div>
     <div class="row">
@@ -11,7 +12,7 @@
             <h2>Recetario</h2>
             <div class="card">
                 <ul class="list-group list-group-flush">
-                    <li *ngFor="let receta of recetas" (click)="selecionarReceta(receta)"
+                    <li *ngFor="let receta of recetas | recetaPipe : checkGluten : busqueda " (click)="selecionarReceta(receta)"
                         class="position-relative list-group-item {{ (receta==rSeleccionado) ? 'active' : ''  }}">
                         <p class="m-0 listname">{{receta.nombre}}</p>
                         <p class="m-0 text-muted">{{receta.cocinero}}</p>

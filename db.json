@@ -1,32 +1,59 @@
 {
+  "tareas": [
+    {
+      "id": 2,
+      "titulo": "Mejorar UI, mostrando mensajes",
+      "completada": true
+    },
+    {
+      "id": 3,
+      "titulo": "El eliminar mostrar al usuario ID y titulo de la tarea eliminada",
+      "completada": true
+    },
+    {
+      "id": 4,
+      "titulo": "Mejorar diseño",
+      "completada": false
+    },
+    {
+      "id": 5,
+      "titulo": "comprobar que titulo tarea nueva > 1",
+      "completada": true
+    },
+    {
+      "id": 6,
+      "titulo": "¿ Que pasa si paramos jon-server?",
+      "completada": true
+    }
+  ],
   "colores": [
     {
       "id": 1,
-      "nombre": "Negro",
+      "nombre": "negro",
       "hex": "#000"
     },
     {
       "id": 2,
-      "nombre": "Blanco",
-      "hex": "#fff"
+      "nombre": "blanco",
+      "hex": "#FFF"
     },
     {
       "id": 3,
-      "nombre": "Azul",
-      "hex": "#00f"
+      "nombre": "azul",
+      "hex": "#00F"
     },
     {
       "id": 4,
-      "nombre": "Rojo",
-      "hex": "#f00"
+      "nombre": "rojo",
+      "hex": "#F00"
     },
     {
       "id": 5,
-      "nombre": "Verde",
-      "hex": "#0f0"
+      "nombre": "verde",
+      "hex": "#0F0"
     },
     {
-      "nombre": "Teal",
+      "nombre": "teal",
       "hex": "#00FFDD",
       "id": 6
     }

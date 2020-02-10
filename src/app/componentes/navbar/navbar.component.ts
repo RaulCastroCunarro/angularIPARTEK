@@ -12,43 +12,63 @@ export class NavbarComponent implements OnInit {
   constructor() {
     this.enlaces = [{
       'nombre': 'Inicio',
-      'direccion': '/'
+      'direccion': '/',
+      'icono': 'fas fa-home'
     },
     {
       'nombre': 'Productos',
-      'direccion': '/productos'
+      'direccion': '/productos',
+      'icono': 'fas fa-shopping-basket'
     },
     {
       'nombre': 'Juego',
-      'direccion': '/juego'
+      'direccion': '/juego',
+      'icono': 'fas fa-dice'
     },
     {
       'nombre': 'Arrays',
-      'direccion': '/arrays'
-    },
-    {
-      'nombre': 'Productos',
-      'direccion': '/productos'
+      'direccion': '/arrays',
+      'icono': 'fas fa-layer-group'
     },
     {
       'nombre': 'Ej. Clase y Rest',
-      'direccion': '/pokemon'
+      'direccion': '/pokemon',
+      'icono': 'fas fa-bullseye'
     },
     {
       'nombre': 'Estilos',
-      'direccion': '/estilos'
+      'direccion': '/estilos',
+      'icono': 'fas fa-swatchbook'
     },
     {
       'nombre': 'Directivas',
-      'direccion': '/directivas'
+      'direccion': '/directivas',
+      'icono': 'fas fa-compass'
     },
     {
       'nombre': 'Filtros',
-      'direccion': '/filtros'
+      'direccion': '/filtros',
+      'icono': 'fas fa-filter'
     },
     {
       'nombre': 'Recetario',
-      'direccion': '/recetario'
+      'direccion': '/recetario',
+      'icono': 'far fa-edit'
+    },
+    {
+      'nombre': 'Error 404',
+      'direccion': '/error404',
+      'icono': 'fas fa-exclamation-circle'
+    },
+    {
+      'nombre': 'Saludar',
+      'direccion': '/Saludar',
+      'icono': 'far fa-handshake'
+    },
+    {
+      'nombre': 'Tareas',
+      'direccion': '/tareas',
+      'icono': 'fas fa-tasks'
     }
   ];
   }

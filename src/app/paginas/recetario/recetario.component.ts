@@ -10,11 +10,13 @@ export class RecetarioComponent implements OnInit {
 
   recetas: Array<any>;
   rSeleccionado: any;
+  busqueda: string;
 
   constructor() {
     console.trace('RecetarioComponent constructor');
     this.recetas = RECETARIO;
     this.rSeleccionado = this.recetas[0];
+    this.busqueda = "";
   }// constructor
 
   ngOnInit() {

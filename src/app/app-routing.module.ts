@@ -10,6 +10,9 @@ import { EstilosSASSComponent } from './paginas/estilos-sass/estilos-sass.compon
 import { DirectivasComponent } from './paginas/directivas/directivas.component';
 import { FiltrosComponent } from './paginas/filtros/filtros.component';
 import { RecetarioComponent } from './paginas/recetario/recetario.component';
+import { Error404Component } from './paginas/error404/error404.component';
+import { SaludarComponent } from './paginas/saludar/saludar.component';
+import { TareasComponent } from './paginas/tareas/tareas.component';
 
 /**
  * Definir las rutas la app de angular
@@ -24,7 +27,10 @@ const routes: Routes = [
   { path: 'estilos', component: EstilosSASSComponent},
   { path: 'directivas', component: DirectivasComponent},
   { path: 'filtros', component: FiltrosComponent},
-  { path: 'recetario', component: RecetarioComponent}
+  { path: 'recetario', component: RecetarioComponent},
+  { path: 'error404', component: Error404Component},
+  { path: 'Saludar', component: SaludarComponent},
+  { path: 'tareas', component: TareasComponent}
 ];
 
 @NgModule({
